@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import FeedbackOptions from 'components/FeedbackOptions';
-import Notification from './Notification/Notification';
+import Notification from './Statistics/Notification';
 import Statistics from './Statistics';
 import Section from './Section';
 
@@ -32,12 +32,11 @@ class App extends Component {
     const totalData = this.countTotalFeedback();
     const message = 'There is no feedback';
     return (
-      <div>
-        <Section title="Please leave feedback" />
-        <FeedbackOptions onLeaveFeedback={this.leaveFeedback} />
-
-        <Section title="Statistics" />
-        <div className="containerStatistics">
+      <>
+        <Section title="Please leave feedback">
+          <FeedbackOptions onLeaveFeedback={this.leaveFeedback} />
+        </Section>
+        <Section title="Statistics">
           {!totalData ? (
             <Notification message={message} />
           ) : (
@@ -46,11 +45,11 @@ class App extends Component {
               neutral={neutral}
               bad={bad}
               total={totalData}
-              positivePrecentage={this.positivePercent()}
+              precentage={this.positivePercent()}
             />
           )}
-        </div>
-      </div>
+        </Section>
+      </>
     );
   }
 }

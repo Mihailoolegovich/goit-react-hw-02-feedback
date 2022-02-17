@@ -1,4 +1,8 @@
-.title {
-  margin-top: 50px;
+.containerStatistics {
+  padding: 20px 10px;
+  margin: 0 auto 40px;
   text-align: center;
+}
+.title {
+  margin-bottom: 40px;
 }

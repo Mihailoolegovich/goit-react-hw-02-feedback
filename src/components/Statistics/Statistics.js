@@ -1,32 +1,37 @@
 import React, { Component } from 'react';
+import propTypes from 'prop-types';
 
 class Statistics extends Component {
   render() {
-    console.log(this.props);
-
+    const { good, neutral, bad, total, precentage } = this.props;
     return (
       <>
-        {/* <p>There is no feedback</p> */}
-        <ul>
-          <li>
-            <p>Good: <b>{this.props.good}</b></p>
-          </li>
-          <li>
-            <p>Neutral: <b>{this.props.neutral}</b></p>
-          </li>
-          <li>
-            <p>Bad: <b>{this.props.bad}</b></p>
-          </li>
-          <li>
-            <p>Total: <b>{this.props.total}</b></p>
-          </li>
-          <li>
-            <p>Postive feedback: <b>{this.props.positivePrecentage}</b> %</p>
-          </li>
-        </ul>
+        <p>
+          Good: <b>{good}</b>
+        </p>
+        <p>
+          Neutral: <b>{neutral}</b>
+        </p>
+        <p>
+          Bad: <b>{bad}</b>
+        </p>
+        <p>
+          Total: <b>{total}</b>
+        </p>
+        <p>
+          Postive feedback: <b>{precentage}</b> %
+        </p>
       </>
     );
   }
 }
 
 export default Statistics;
+
+Statistics.propTypes = {
+  good: propTypes.number.isRequired,
+  neutral: propTypes.number.isRequired,
+  bad: propTypes.number.isRequired,
+  total: propTypes.number.isRequired,
+  precentage: propTypes.number.isRequired,
+};
