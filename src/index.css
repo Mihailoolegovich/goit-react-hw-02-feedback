@@ -15,8 +15,7 @@ code {
 }
 
 ul,
-li
-{
+li {
   list-style: none;
   padding: 0;
   margin: 0;
@@ -25,11 +24,6 @@ li
 #root {
   margin: 30px auto;
   width: 70%;
-}
-
-.title {
-  margin-top: 50px;
-  text-align: center;
 }
 
 p {
