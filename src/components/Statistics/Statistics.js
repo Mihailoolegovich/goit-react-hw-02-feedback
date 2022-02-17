@@ -2,24 +2,26 @@ import React, { Component } from 'react';
 
 class Statistics extends Component {
   render() {
+    console.log(this.props);
+
     return (
       <>
-        <h2>Statistics</h2>
+        {/* <p>There is no feedback</p> */}
         <ul>
           <li>
-            <p>Good: {this.props.good} </p>
+            <p>Good: <b>{this.props.good}</b></p>
           </li>
           <li>
-            <p>Neutral: {this.props.neutral} </p>
+            <p>Neutral: <b>{this.props.neutral}</b></p>
           </li>
           <li>
-            <p>Bad: {this.props.bad}</p>
+            <p>Bad: <b>{this.props.bad}</b></p>
           </li>
           <li>
-            <p>Total: {this.props.total}</p>
+            <p>Total: <b>{this.props.total}</b></p>
           </li>
           <li>
-            <p>Postive feedback: {this.props.positivePrecentage} % </p>
+            <p>Postive feedback: <b>{this.props.positivePrecentage}</b> %</p>
           </li>
         </ul>
       </>
