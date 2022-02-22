@@ -3,13 +3,19 @@ import FeedbackOptions from 'components/FeedbackOptions';
 import Notification from './Statistics/Notification';
 import Statistics from './Statistics';
 import Section from './Section';
+import options from './data/options.json';
+
+// const options = options;
 
 class App extends Component {
   state = {
+    // options: options,
     good: 0,
     neutral: 0,
     bad: 0,
   };
+
+  options = options;
 
   countTotalFeedback = () => {
     const { good, neutral, bad } = this.state;
@@ -34,7 +40,10 @@ class App extends Component {
     return (
       <>
         <Section title="Please leave feedback">
-          <FeedbackOptions onLeaveFeedback={this.leaveFeedback} />
+          <FeedbackOptions
+            options={this.options}
+            onLeaveFeedback={this.leaveFeedback}
+          />
         </Section>
         <Section title="Statistics">
           {!totalData ? (
@@ -45,7 +54,7 @@ class App extends Component {
               neutral={neutral}
               bad={bad}
               total={totalData}
-              precentage={this.positivePercent()}
+              percentage={this.positivePercent()}
             />
           )}
         </Section>

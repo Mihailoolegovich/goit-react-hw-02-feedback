@@ -1,0 +1,14 @@
+[
+  {
+    "name": "good",
+    "icon": "https://cdn-icons-png.flaticon.com/512/927/927567.png"
+  },
+  {
+    "name": "neutral",
+    "icon": "https://cdn-icons-png.flaticon.com/512/927/927557.png"
+  },
+  {
+    "name": "bad",
+    "icon": "https://cdn-icons-png.flaticon.com/512/927/927561.png"
+  }
+]
